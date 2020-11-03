@@ -11,3 +11,17 @@ steps "Run a Script" {
         }
     }
 }
+
+steps "Approve Deployment" {
+
+    actions "Approve Deployment" {
+        action_type = "Octopus.Manual"
+        notes = "Please check and approve deployment"
+
+        properties {
+            Octopus_Action_Manual_BlockConcurrentDeployments = "False"
+            Octopus_Action_Manual_Instructions = "Gar, approve or face the plank"
+            Octopus_Action_Manual_ResponsibleTeamIds = "Everyone"
+        }
+    }
+}
