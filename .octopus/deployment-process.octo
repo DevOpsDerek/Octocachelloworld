@@ -1,0 +1,13 @@
+steps "Run a Script" {
+
+    actions "Run a Script" {
+        action_type = "Octopus.Script"
+
+        properties {
+            Octopus_Action_RunOnServer = "true"
+            Octopus_Action_Script_ScriptSource = "Inline"
+            Octopus_Action_Script_Syntax = "PowerShell"
+            Octopus_Action_Script_ScriptBody = "Write-Host \"Here be Dragons'\""
+        }
+    }
+}
